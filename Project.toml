@@ -1,0 +1,13 @@
+name = "StippleActiveTables"
+uuid = "019da952-fa7b-77c3-9a56-736984f089dd"
+version = "0.1.0"
+authors = ["Helmut Hänsel <helmut.haensel@gmx.de>"]
+
+[deps]
+DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
+Stipple = "4acbeb90-81a0-11ea-1966-bdaff8155998"
+
+[compat]
+DataFrames = "1.8.2"
+Stipple = "0.27.23, 0.28, 0.29, 0.30, 0.31"
+julia = "1.6"
