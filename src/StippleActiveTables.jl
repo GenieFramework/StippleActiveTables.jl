@@ -26,6 +26,8 @@ mutable struct ActiveTable
     data::DataFrame
 end
 
+ActiveTable() = ActiveTable(DataFrame())
+
 register_normal_element("active__table", context = @__MODULE__)
 
 function activetable(data::Symbol, args...; kwargs...)
@@ -38,6 +40,7 @@ function Stipple.render(at::ActiveTable)
 end
 
 function Stipple.stipple_parse(::Type{ActiveTable}, v::Vector)
+    isempty(v) && return ActiveTable(DataFrame())
     ActiveTable(DataFrame(permutedims(reduce(hcat, v[2:end])), v[1]))
 end
 

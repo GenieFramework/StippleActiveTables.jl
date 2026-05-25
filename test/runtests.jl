@@ -49,7 +49,7 @@ using Stipple
 
         # Test empty vector
         empty_at = Stipple.stipple_parse(ActiveTable, [])
-        @test empty_at == DataFrame
+        @test empty_at.data == DataFrame()
     end
 
     @testset "Round-trip conversion" begin
